@@ -1,0 +1,12 @@
+# Netlify Configuration for PredictAI Monorepo / Subfolder
+
+[build]
+  base = "frontend"
+  publish = "dist"
+  command = "npm run build"
+
+# SPA Fallback rule: ensures client-side routing and page reloads don't 404
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
